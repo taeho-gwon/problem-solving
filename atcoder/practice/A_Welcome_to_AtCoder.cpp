@@ -1,5 +1,5 @@
-#include<bits/stdc++.h>
-#include<atcoder/all>
+#include <bits/stdc++.h>
+#include <atcoder/all>
 
 using namespace std;
 using namespace atcoder;
@@ -10,7 +10,7 @@ using str = string;
 using pi = pair<int, int>;
 using pl = pair<ll, ll>;
 
-template<class T>
+template <class T>
 using vc = vector<T>;
 
 using vi = vc<int>;
@@ -23,9 +23,9 @@ using vvl = vc<vl>;
 using vvpi = vc<vpi>;
 using vvpl = vc<vpl>;
 
-template<class T>
+template <class T>
 using pq = priority_queue<T>;
-template<class T>
+template <class T>
 using pqg = priority_queue<T, vc<T>, greater<T>>;
 
 using mint997 = modint998244353;
@@ -36,9 +36,14 @@ void yes() { cout << "Yes\n"; }
 void no() { cout << "No\n"; }
 void yesno(bool x) { x ? yes() : no(); }
 
-int main() {
+int main()
+{
     cin.tie(nullptr);
     cin.sync_with_stdio(false);
-    
+
+    int a, b, c;
+    str s;
+    cin >> a >> b >> c >> s;
+    cout << a + b + c << " " << s;
     return 0;
 }
