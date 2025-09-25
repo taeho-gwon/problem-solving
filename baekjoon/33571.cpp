@@ -28,7 +28,7 @@ using pqg = priority_queue<T, vc<T>, greater<T>>;
 
 int count_hole(char c)
 {
-    string hole1 = "AabDdegOoPpQqR";
+    string hole1 = "AabDdegOoPpQqR@";
     if (c == 'B')
         return 2;
     return (int)(hole1.find(c) != string::npos);
@@ -41,6 +41,7 @@ int main()
     str s;
     getline(cin, s);
 
-    cout << accumulate(s.begin(), s.end(), 0, count_hole);
+    cout << accumulate(s.begin(), s.end(), 0, [](int sum, char c)
+                       { return sum + count_hole(c); });
     return 0;
 }
